@@ -1,0 +1,743 @@
+{
+    "author": "Andro Logiciels",
+    "dependencies": {
+        "@rebble/clay": "^1.0.0"
+    },
+    "keywords": [
+        "pebble-app",
+        "watchface",
+        "lcd",
+        "quartz",
+        "casio-style"
+    ],
+    "name": "quartz-lcd",
+    "pebble": {
+        "capabilities": [
+            "location",
+            "configurable"
+        ],
+        "displayName": "Quartz LCD 1.4",
+        "enableMultiJS": true,
+        "messageKeys": [
+            "BackgroundColor",
+            "DateColor",
+            "TimeColor",
+            "ShowSeconds",
+            "BlinkColon",
+            "ShowInactiveSegments",
+            "TEMPERATURE",
+            "LOCATION",
+            "REQUEST_WEATHER",
+            "TemperatureUnit",
+            "SegmentColor"
+        ],
+        "projectType": "native",
+        "resources": {
+            "media": [
+                {
+                    "file": "images/large_white_4.png",
+                    "name": "IMG_LARGE_WHITE_4",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_orange_2.png",
+                    "name": "IMG_SMALL_ORANGE_2",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_white_0.png",
+                    "name": "IMG_LARGE_WHITE_0",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_orange_9.png",
+                    "name": "IMG_LARGE_ORANGE_9",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_blue_9.png",
+                    "name": "IMG_SMALL_BLUE_9",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_white_0.png",
+                    "name": "IMG_SMALL_WHITE_0",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_orange_7.png",
+                    "name": "IMG_LARGE_ORANGE_7",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_blue_2.png",
+                    "name": "IMG_LARGE_BLUE_2",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_blue_0.png",
+                    "name": "IMG_LARGE_BLUE_0",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_orange_7.png",
+                    "name": "IMG_SMALL_ORANGE_7",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/battery_030.png",
+                    "name": "IMG_BATTERY_030",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_yellow_2.png",
+                    "name": "IMG_SMALL_YELLOW_2",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_gray_4.png",
+                    "name": "IMG_LARGE_GRAY_4",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/degree.png",
+                    "name": "IMG_DEGREE",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_blue_1.png",
+                    "name": "IMG_SMALL_BLUE_1",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_yellow_8.png",
+                    "name": "IMG_LARGE_YELLOW_8",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_gray_5.png",
+                    "name": "IMG_SMALL_GRAY_5",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_green_5.png",
+                    "name": "IMG_SMALL_GREEN_5",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_blue_6.png",
+                    "name": "IMG_LARGE_BLUE_6",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_gray_7.png",
+                    "name": "IMG_LARGE_GRAY_7",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_gray_2.png",
+                    "name": "IMG_SMALL_GRAY_2",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_off.png",
+                    "name": "IMG_SMALL_OFF",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_yellow_6.png",
+                    "name": "IMG_SMALL_YELLOW_6",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_green_0.png",
+                    "name": "IMG_SMALL_GREEN_0",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_gray_3.png",
+                    "name": "IMG_SMALL_GRAY_3",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_green_4.png",
+                    "name": "IMG_LARGE_GREEN_4",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_gray_9.png",
+                    "name": "IMG_SMALL_GRAY_9",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_yellow_9.png",
+                    "name": "IMG_LARGE_YELLOW_9",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_blue_2.png",
+                    "name": "IMG_SMALL_BLUE_2",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_green_9.png",
+                    "name": "IMG_SMALL_GREEN_9",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_orange_8.png",
+                    "name": "IMG_SMALL_ORANGE_8",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/battery_050.png",
+                    "name": "IMG_BATTERY_050",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_yellow_8.png",
+                    "name": "IMG_SMALL_YELLOW_8",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_green_3.png",
+                    "name": "IMG_SMALL_GREEN_3",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_green_8.png",
+                    "name": "IMG_LARGE_GREEN_8",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_blue_5.png",
+                    "name": "IMG_SMALL_BLUE_5",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_green_2.png",
+                    "name": "IMG_LARGE_GREEN_2",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_gray_6.png",
+                    "name": "IMG_LARGE_GRAY_6",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_white_8.png",
+                    "name": "IMG_LARGE_WHITE_8",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_orange_4.png",
+                    "name": "IMG_LARGE_ORANGE_4",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_yellow_0.png",
+                    "name": "IMG_LARGE_YELLOW_0",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_gray_9.png",
+                    "name": "IMG_LARGE_GRAY_9",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_orange_4.png",
+                    "name": "IMG_SMALL_ORANGE_4",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/battery_060.png",
+                    "name": "IMG_BATTERY_060",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_gray_8.png",
+                    "name": "IMG_LARGE_GRAY_8",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_yellow_9.png",
+                    "name": "IMG_SMALL_YELLOW_9",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_orange_1.png",
+                    "name": "IMG_SMALL_ORANGE_1",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_blue_4.png",
+                    "name": "IMG_SMALL_BLUE_4",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/day_cursor.png",
+                    "name": "IMG_DAY_CURSOR",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_yellow_3.png",
+                    "name": "IMG_SMALL_YELLOW_3",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_white_8.png",
+                    "name": "IMG_SMALL_WHITE_8",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/bt_on.png",
+                    "name": "IMG_BT_ON",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/battery_000.png",
+                    "name": "IMG_BATTERY_000",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_white_7.png",
+                    "name": "IMG_LARGE_WHITE_7",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_gray_3.png",
+                    "name": "IMG_LARGE_GRAY_3",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_blue_9.png",
+                    "name": "IMG_LARGE_BLUE_9",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_blue_3.png",
+                    "name": "IMG_LARGE_BLUE_3",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_orange_0.png",
+                    "name": "IMG_SMALL_ORANGE_0",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_blue_0.png",
+                    "name": "IMG_SMALL_BLUE_0",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_yellow_7.png",
+                    "name": "IMG_LARGE_YELLOW_7",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_yellow_6.png",
+                    "name": "IMG_LARGE_YELLOW_6",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_orange_6.png",
+                    "name": "IMG_LARGE_ORANGE_6",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_white_3.png",
+                    "name": "IMG_LARGE_WHITE_3",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_white_6.png",
+                    "name": "IMG_SMALL_WHITE_6",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/colon.png",
+                    "name": "IMG_COLON",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_green_6.png",
+                    "name": "IMG_SMALL_GREEN_6",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_white_1.png",
+                    "name": "IMG_SMALL_WHITE_1",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_yellow_4.png",
+                    "name": "IMG_LARGE_YELLOW_4",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_green_1.png",
+                    "name": "IMG_SMALL_GREEN_1",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_gray_2.png",
+                    "name": "IMG_LARGE_GRAY_2",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_yellow_2.png",
+                    "name": "IMG_LARGE_YELLOW_2",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_yellow_5.png",
+                    "name": "IMG_SMALL_YELLOW_5",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/battery_070.png",
+                    "name": "IMG_BATTERY_070",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_orange_5.png",
+                    "name": "IMG_SMALL_ORANGE_5",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_blue_8.png",
+                    "name": "IMG_SMALL_BLUE_8",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_yellow_4.png",
+                    "name": "IMG_SMALL_YELLOW_4",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_yellow_7.png",
+                    "name": "IMG_SMALL_YELLOW_7",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_orange_0.png",
+                    "name": "IMG_LARGE_ORANGE_0",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_white_3.png",
+                    "name": "IMG_SMALL_WHITE_3",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_yellow_1.png",
+                    "name": "IMG_LARGE_YELLOW_1",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_white_7.png",
+                    "name": "IMG_SMALL_WHITE_7",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/battery_040.png",
+                    "name": "IMG_BATTERY_040",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_white_6.png",
+                    "name": "IMG_LARGE_WHITE_6",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_white_2.png",
+                    "name": "IMG_LARGE_WHITE_2",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_yellow_0.png",
+                    "name": "IMG_SMALL_YELLOW_0",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_green_7.png",
+                    "name": "IMG_SMALL_GREEN_7",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_green_0.png",
+                    "name": "IMG_LARGE_GREEN_0",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_white_9.png",
+                    "name": "IMG_SMALL_WHITE_9",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_blue_7.png",
+                    "name": "IMG_SMALL_BLUE_7",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_gray_8.png",
+                    "name": "IMG_SMALL_GRAY_8",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/battery_080.png",
+                    "name": "IMG_BATTERY_080",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_yellow_3.png",
+                    "name": "IMG_LARGE_YELLOW_3",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_green_5.png",
+                    "name": "IMG_LARGE_GREEN_5",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_orange_2.png",
+                    "name": "IMG_LARGE_ORANGE_2",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/battery_100.png",
+                    "name": "IMG_BATTERY_100",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/battery_010.png",
+                    "name": "IMG_BATTERY_010",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_gray_6.png",
+                    "name": "IMG_SMALL_GRAY_6",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_blue_3.png",
+                    "name": "IMG_SMALL_BLUE_3",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_gray_7.png",
+                    "name": "IMG_SMALL_GRAY_7",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_white_4.png",
+                    "name": "IMG_SMALL_WHITE_4",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_blue_5.png",
+                    "name": "IMG_LARGE_BLUE_5",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_gray_4.png",
+                    "name": "IMG_SMALL_GRAY_4",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_blue_4.png",
+                    "name": "IMG_LARGE_BLUE_4",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_gray_0.png",
+                    "name": "IMG_LARGE_GRAY_0",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_orange_3.png",
+                    "name": "IMG_SMALL_ORANGE_3",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_gray_1.png",
+                    "name": "IMG_SMALL_GRAY_1",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_orange_6.png",
+                    "name": "IMG_SMALL_ORANGE_6",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_gray_1.png",
+                    "name": "IMG_LARGE_GRAY_1",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_blue_1.png",
+                    "name": "IMG_LARGE_BLUE_1",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_white_5.png",
+                    "name": "IMG_SMALL_WHITE_5",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/bt_off.png",
+                    "name": "IMG_BT_OFF",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_green_9.png",
+                    "name": "IMG_LARGE_GREEN_9",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_off.png",
+                    "name": "IMG_LARGE_OFF",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_white_1.png",
+                    "name": "IMG_LARGE_WHITE_1",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_yellow_5.png",
+                    "name": "IMG_LARGE_YELLOW_5",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_orange_8.png",
+                    "name": "IMG_LARGE_ORANGE_8",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_blue_8.png",
+                    "name": "IMG_LARGE_BLUE_8",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_blue_7.png",
+                    "name": "IMG_LARGE_BLUE_7",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_orange_1.png",
+                    "name": "IMG_LARGE_ORANGE_1",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_gray_5.png",
+                    "name": "IMG_LARGE_GRAY_5",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/battery_020.png",
+                    "name": "IMG_BATTERY_020",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_green_3.png",
+                    "name": "IMG_LARGE_GREEN_3",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_green_1.png",
+                    "name": "IMG_LARGE_GREEN_1",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/battery_090.png",
+                    "name": "IMG_BATTERY_090",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_orange_9.png",
+                    "name": "IMG_SMALL_ORANGE_9",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_orange_3.png",
+                    "name": "IMG_LARGE_ORANGE_3",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_green_6.png",
+                    "name": "IMG_LARGE_GREEN_6",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_green_8.png",
+                    "name": "IMG_SMALL_GREEN_8",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_white_9.png",
+                    "name": "IMG_LARGE_WHITE_9",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_green_4.png",
+                    "name": "IMG_SMALL_GREEN_4",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_blue_6.png",
+                    "name": "IMG_SMALL_BLUE_6",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_green_2.png",
+                    "name": "IMG_SMALL_GREEN_2",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_orange_5.png",
+                    "name": "IMG_LARGE_ORANGE_5",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_green_7.png",
+                    "name": "IMG_LARGE_GREEN_7",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_gray_0.png",
+                    "name": "IMG_SMALL_GRAY_0",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/large_white_5.png",
+                    "name": "IMG_LARGE_WHITE_5",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_yellow_1.png",
+                    "name": "IMG_SMALL_YELLOW_1",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/small_white_2.png",
+                    "name": "IMG_SMALL_WHITE_2",
+                    "type": "bitmap"
+                }
+            ]
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "diorite",
+            "emery",
+            "flint"
+        ],
+        "uuid": "7f3e6c32-1e9d-4c84-a8e1-6a5e3b2d91f7",
+        "watchapp": {
+            "watchface": true
+        }
+    },
+    "version": "1.5.0"
+}
