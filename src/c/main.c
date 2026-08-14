@@ -40,8 +40,8 @@ static GBitmap *s_small[10];
 static GBitmap *s_colon;
 static GBitmap *s_degree;
 static GBitmap *s_battery[11];
-static GBitmap *s_bt_on;
-static GBitmap *s_bt_off;
+//static GBitmap *s_bt_on;
+//static GBitmap *s_bt_off;
 static GBitmap *s_cursor;
 
 static char s_location[32] = "LOCALISATION";
@@ -379,14 +379,14 @@ static void canvas_update(Layer *layer, GContext *ctx) {
     date_color(),
     GTextAlignmentLeft
   );
-
+/*
   draw_bitmap(
     ctx,
     s_bt_connected ? s_bt_on : s_bt_off,
     126,
     4
   );
-
+*/
   draw_time(ctx, t);
   draw_weather(ctx);
 
@@ -570,7 +570,7 @@ static void init(void) {
     gbitmap_create_with_resource(
       RESOURCE_ID_IMG_DEGREE
     );
-
+/*
   s_bt_on =
     gbitmap_create_with_resource(
       RESOURCE_ID_IMG_BT_ON
@@ -580,7 +580,7 @@ static void init(void) {
     gbitmap_create_with_resource(
       RESOURCE_ID_IMG_BT_OFF
     );
-
+*/
   s_cursor =
     gbitmap_create_with_resource(
       RESOURCE_ID_IMG_DAY_CURSOR
@@ -672,8 +672,8 @@ static void deinit(void) {
   if (s_small_off) gbitmap_destroy(s_small_off);
   if (s_colon) gbitmap_destroy(s_colon);
   if (s_degree) gbitmap_destroy(s_degree);
-  if (s_bt_on) gbitmap_destroy(s_bt_on);
-  if (s_bt_off) gbitmap_destroy(s_bt_off);
+  //if (s_bt_on) gbitmap_destroy(s_bt_on);
+  //if (s_bt_off) gbitmap_destroy(s_bt_off);
   if (s_cursor) gbitmap_destroy(s_cursor);
 
   for (int i = 0; i < 11; i++) {
